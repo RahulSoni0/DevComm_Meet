@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgetPass">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/grad">
+
+    </ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/forgettext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:elevation="12dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Forgot your Password?"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/fortextmsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center"
+                android:text="Enter your registered email ID and get instant mail to change your password!"
+                android:textColor="#E6FFFFFF"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forgettext">
+
+            </TextView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fortextmsg">
+
+                <eightbitlab.com.blurview.BlurView
+                    android:id="@+id/blur_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#19335795">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_et"
+                        android:drawableLeft="@drawable/email"
+                        android:drawablePadding="15dp"
+                        android:drawableTint="#B3FFFFFF"
+                        android:fontFamily="@font/acme"
+                        android:hint="Email ID"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#B3FFFFFF" />
+                </eightbitlab.com.blurview.BlurView>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/resetbtn"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView1"
+                android:layout_marginTop="32dp"
+                android:layout_width="240dp"
+                android:layout_height="56dp"
+                android:text="RESET PASSWORD"
+                android:focusableInTouchMode="true"
+                android:padding="8dp"
+                android:clickable="true"
+                android:elevation="24dp"
+                android:background="@drawable/shapebtn"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:layout_gravity="center">
+
+            </android.support.v7.widget.AppCompatButton>
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/RTNLOGIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:elevation="12dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="RETURN TO LOGIN"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resetbtn"
+
+
+                >
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RTNLOGIN"
+                >
+
+            </LinearLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

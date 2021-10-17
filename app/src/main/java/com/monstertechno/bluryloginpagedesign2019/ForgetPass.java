@@ -4,36 +4,24 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class signupacc extends AppCompatActivity {
-  private TextView loginbtnrd ;
-  private Button Signup;
+public class ForgetPass extends AppCompatActivity {
+    private TextView RTtnlogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signupacc);
+        setContentView(R.layout.activity_forget_pass);
 
+        RTtnlogin = findViewById(R.id.RTNLOGIN);
 
-        loginbtnrd = findViewById(R.id.loginbtnrd);
-        loginbtnrd.setOnClickListener(new View.OnClickListener() {
+        RTtnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it=new Intent(signupacc.this,Signinacc.class);
-                startActivity(it);
+                Intent intent = new Intent(ForgetPass.this , Signinacc.class);
+                startActivity(intent);
             }
         });
 
     }
-
-
-
-
-
-
-
-
-
-
 }

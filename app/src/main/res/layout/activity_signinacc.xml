@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signupacc">
+    tools:context=".Signinacc">
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -15,28 +16,46 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/welcometxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:text="DevComm Meet "
-                android:textSize="42sp"
                 android:layout_marginTop="36dp"
-                android:fontFamily="sans-serif-condensed"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
                 android:elevation="12dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="DevComm Meet "
+                android:textColor="#ffffff"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/welcometxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="112dp"
+                android:elevation="12dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Welcome back "
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
 
                 >
@@ -44,7 +63,7 @@
             </TextView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/cardView0"
+                android:id="@+id/cardView1"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="20dp"
@@ -53,49 +72,9 @@
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
-                android:elevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/welcometxt">
-
-                <eightbitlab.com.blurview.BlurView
-                    android:id="@+id/blur_user"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#19335795"
-                    android:elevation="@dimen/cardview_default_elevation"
-                    >
-
-                    <EditText
-                        android:elevation="4dp"
-                        android:id="@+id/username"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/custom_et"
-                        android:drawableLeft="@drawable/user"
-                        android:drawablePadding="15dp"
-                        android:drawableTint="#B3FFFFFF"
-                        android:fontFamily="@font/acme"
-                        android:hint="User name"
-                        android:inputType="text"
-                        android:padding="16dp"
-                        android:textColor="@android:color/white"
-                        android:textColorHint="#B3FFFFFF" />
-                </eightbitlab.com.blurview.BlurView>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardView1"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="20dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView0">
+                app:layout_constraintTop_toBottomOf="@+id/welcometxt2">
 
                 <eightbitlab.com.blurview.BlurView
                     android:id="@+id/blur_email"
@@ -161,139 +140,100 @@
                         android:src="#19335795" />
                 </eightbitlab.com.blurview.BlurView>
             </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardView4"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="20dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView3">
-
-                <eightbitlab.com.blurview.BlurView
-                    android:id="@+id/passcfn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#19335795">
-
-                    <EditText
-                        android:id="@+id/passwordcfn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/custom_et"
-                        android:drawableLeft="@drawable/lock"
-                        android:drawablePadding="15dp"
-                        android:drawableTint="#B3FFFFFF"
-                        android:fontFamily="@font/acme"
-                        android:hint=" Confirm Password"
-                        android:inputType="textPassword"
-                        android:padding="16dp"
-                        android:textColor="@android:color/white"
-                        android:textColorHint="#B3FFFFFF" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="#19335795" />
-                </eightbitlab.com.blurview.BlurView>
-            </android.support.v7.widget.CardView>
 
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/getsbtn"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardView4"
-                android:layout_marginTop="32dp"
                 android:layout_width="240dp"
                 android:layout_height="56dp"
-                android:text="GET STARTED"
-                android:focusableInTouchMode="true"
-                android:padding="8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shapebtn"
                 android:clickable="true"
                 android:elevation="24dp"
-                android:background="@drawable/shapebtn"
-                android:textColor="@android:color/white"
-                android:gravity="center"
+                android:focusableInTouchMode="true"
                 android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="LOG IN"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:layout_gravity="center">
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView3">
 
             </android.support.v7.widget.AppCompatButton>
 
+            <TextView
+                android:id="@+id/forgetPasswordTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="38dp"
+                android:clickable="true"
+                android:fontFamily="sans-serif"
+                android:paddingStart="8dp"
+                android:text="Forget Password ? "
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/getsbtn" />
 
+            <TextView
+                android:id="@+id/LINEE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56sp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="⁃⁃⁃⁃⁃⁃⁃⁃OR⁃⁃⁃⁃⁃⁃⁃⁃"
+                android:textColor="#99FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/getsbtn">
 
-
+            </TextView>
 
 
             <TextView
-                android:id="@+id/loginbtnrd"
-                android:clickable="true"
+                android:id="@+id/signuprd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ALREADY HAVE AN ACCOUNT ? LOG IN  "
-                android:textSize="16sp"
-                android:gravity="center"
+                android:layout_marginTop="24sp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
                 android:fontFamily="sans-serif-condensed-medium"
-                app:layout_constraintTop_toBottomOf="@id/getsbtn"
+                android:gravity="center"
+                android:text="NEW HERE ? SIGNUP  "
                 android:textColor="#E6FFFFFF"
+                android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginTop="32sp"
-                android:layout_marginBottom="24dp">
+                app:layout_constraintTop_toBottomOf="@id/LINEE">
+
             </TextView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/loginbtnrd"
-                >
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signuprd">
 
             </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </android.support.constraint.ConstraintLayout>
 
 
-
-
-
-
-
-
-
-
-
-
-
     </ScrollView>
+
+
 
 
 
